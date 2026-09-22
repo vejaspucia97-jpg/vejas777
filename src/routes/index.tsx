@@ -221,9 +221,16 @@ function VejasPage() {
               </div>
               <h2>{isLive ? "VEJAS777 TRANSLIUOJA" : "TRANSLIACIJA NETRUKUS"}</h2>
               <p>Prisijunk prie transliacijos ir būk veiksmo centre.</p>
-              <ExternalLink href={links.kick} className="button button-live button-full">
-                <Play size={19} fill="currentColor" aria-hidden="true" /> ŽIŪRĖTI LIVE
-              </ExternalLink>
+              <div className="live-platform-col">
+                <span className="lp-prompt">PASIRINK PLATFORMĄ — ŽIŪRĖTI LIVE</span>
+                {livePlatforms.map(({ name, href, icon: Icon, color }) => (
+                  <ExternalLink key={name} href={href} className="button button-live button-full lp-btn" label={`Žiūrėti ${name} tiesiogiai`}>
+                    <span className="lp-icon" style={{ color }} aria-hidden="true"><Icon size={22} /></span>
+                    {name}
+                    <ArrowUpRight size={19} aria-hidden="true" />
+                  </ExternalLink>
+                ))}
+              </div>
               <div className="manual-status"><span /> RANKINIU BŪDU NUSTATYTA BŪSENA</div>
             </aside>
           </div>
