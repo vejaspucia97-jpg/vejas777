@@ -291,8 +291,11 @@ function VejasPage() {
                 <MessageCircle size={21} aria-hidden="true" /> JOIN DISCORD <ArrowUpRight size={19} aria-hidden="true" />
               </ExternalLink>
             </div>
-            <div className="community-emblem" aria-hidden="true">
-              <div className="emblem-ring"><Shield size={74} strokeWidth={1.2} /><span>777</span></div>
+            <div className="community-emblem">
+              <div className="emblem-ring emblem-logo">
+                <img src={vejasLogo} alt="VEJAS777 logotipas" className="emblem-logo-img" width={150} height={150} />
+                <span>777</span>
+              </div>
               <p>VEJAS777 // COMMUNITY UNIT</p>
             </div>
           </div>
