@@ -216,6 +216,7 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
   .nav-discord { display: inline-flex; margin-left: auto; }
   .hero-actions { display: grid; }
   .hero-actions .button-ghost { justify-self: start; min-width: 220px; }
+  .live-platform-btn { flex: 1 1 130px; min-height: 48px; }
   .channel-grid { grid-template-columns: repeat(2, 1fr); }
   .support-actions { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: row; align-items: center; }
