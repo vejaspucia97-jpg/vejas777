@@ -117,7 +117,7 @@ function ExternalLink({
 function BrandMark() {
   return (
     <span className="brand-mark" aria-label="VEJAS777 pradžia">
-      <span className="brand-chevron" aria-hidden="true">V</span>
+      <img src={vejasLogo} alt="VEJAS777 logotipas" className="brand-logo" width={40} height={40} />
       <span>VEJAS<span className="text-primary">777</span></span>
     </span>
   );
