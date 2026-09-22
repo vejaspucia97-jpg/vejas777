@@ -3,17 +3,20 @@ import {
   ArrowUpRight,
   ChevronDown,
   CircleDollarSign,
-  Gamepad2,
   Menu,
   MessageCircle,
   Play,
   Radio,
   Shield,
-  Video,
   X,
-  Youtube,
 } from "lucide-react";
 import multicamBackground from "../assets/dark-multicam.jpg";
+import {
+  DiscordIcon,
+  KickIcon,
+  TikTokIcon,
+  YouTubeIcon,
+} from "../components/BrandIcons";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,28 +52,32 @@ const channels = [
     name: "YouTube",
     description: "Video, klipai ir naujas turinys.",
     href: links.youtube,
-    icon: Youtube,
+    icon: YouTubeIcon,
+    color: "#FF0000",
     code: "YT.01",
   },
   {
     name: "TikTok",
     description: "Trumpi video ir geriausi momentai.",
     href: links.tiktok,
-    icon: Video,
+    icon: TikTokIcon,
+    color: "#ffffff",
     code: "TT.02",
   },
   {
     name: "Kick",
     description: "Tiesioginės VEJAS777 transliacijos.",
     href: links.kick,
-    icon: Gamepad2,
+    icon: KickIcon,
+    color: "#53FC18",
     code: "KK.03",
   },
   {
     name: "Discord",
     description: "Prisijunk prie bendruomenės.",
     href: links.discord,
-    icon: MessageCircle,
+    icon: DiscordIcon,
+    color: "#5865F2",
     code: "DC.04",
   },
 ];
