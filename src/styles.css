@@ -214,8 +214,8 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 640px) {
   .site-container { width: min(1180px, calc(100% - 56px)); }
   .nav-discord { display: inline-flex; margin-left: auto; }
-  .hero-actions { display: flex; }
-  .hero-actions .button { min-width: 220px; }
+  .hero-actions { display: grid; }
+  .hero-actions .button-ghost { justify-self: start; min-width: 220px; }
   .channel-grid { grid-template-columns: repeat(2, 1fr); }
   .support-actions { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: row; align-items: center; }
