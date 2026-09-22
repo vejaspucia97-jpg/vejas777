@@ -16,6 +16,7 @@ import {
   TikTokIcon,
   YouTubeIcon,
 } from "../components/BrandIcons";
+import vejasLogo from "../assets/vejas777-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
