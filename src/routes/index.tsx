@@ -81,6 +81,14 @@ const channels = [
   },
 ];
 
+// Platformos, kuriose šiuo metu vyksta tiesioginė transliacija.
+// Žiūrovui leidžiama pasirinkti, kurioje platformoje žiūrėti LIVE.
+const livePlatforms = [
+  { name: "YouTube", href: links.youtube, icon: YouTubeIcon, color: "#FF0000" },
+  { name: "TikTok", href: links.tiktok, icon: TikTokIcon, color: "#ffffff" },
+  { name: "Kick", href: links.kick, icon: KickIcon, color: "#53FC18" },
+];
+
 function ExternalLink({
   href,
   className,
