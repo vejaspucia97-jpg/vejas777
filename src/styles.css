@@ -114,9 +114,17 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .hero-lead { margin: 28px 0 0; font-family: var(--font-display); font-size: clamp(1.65rem, 7vw, 2.5rem); font-weight: 700; line-height: 1.1; }
 .hero-subcopy { margin: 12px 0 0; color: var(--muted-foreground); font-size: 1rem; line-height: 1.6; }
 .hero-actions { margin-top: 30px; display: grid; gap: 12px; }
+.live-now-label { display: inline-flex; align-items: center; gap: 10px; color: var(--live); font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: .03em; text-transform: uppercase; animation: blink-live 1.6s ease-in-out infinite; }
+.live-platform-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.live-platform-btn { min-height: 50px; flex: 1 1 100%; display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--border); padding: 0 16px; background: color-mix(in oklab, var(--background) 82%, transparent); font-family: var(--font-display); font-weight: 800; font-size: .85rem; text-transform: uppercase; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.live-platform-btn:hover { transform: translateY(-2px); border-color: var(--primary); background: var(--muted); box-shadow: 0 0 22px color-mix(in oklab, var(--primary) 12%, transparent); }
+.live-platform-btn .lp-icon { display: inline-flex; }
+.live-platform-btn .lp-name { margin-right: auto; }
+.status-dot-tiny { width: 6px; height: 6px; }
 .quick-links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .quick-link { min-height: 34px; display: inline-flex; align-items: center; color: var(--muted-foreground); font-family: var(--font-display); font-size: .78rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
 .quick-link:hover { color: var(--foreground); border-color: var(--primary); }
+@keyframes blink-live { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
 .hero-index { display: none; position: absolute; right: -30px; bottom: -70px; color: color-mix(in oklab, var(--primary) 6%, transparent); font-family: var(--font-display); font-size: 30rem; font-weight: 900; line-height: 1; pointer-events: none; }
 
 .live-panel { position: relative; min-height: 440px; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 24px 24px; overflow: hidden; border: 1px solid var(--border); background: linear-gradient(145deg, color-mix(in oklab, var(--card) 92%, transparent), color-mix(in oklab, var(--background) 86%, transparent)); box-shadow: 0 24px 70px oklch(0 0 0 / 45%); }
@@ -142,6 +150,9 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .live-panel h2 { position: relative; margin: 8px 0 0; font-family: var(--font-display); font-size: clamp(1.7rem, 7vw, 2.5rem); line-height: 1; }
 .live-panel > p { position: relative; margin: 10px 0 20px; color: var(--muted-foreground); }
 .button-full { position: relative; width: 100%; }
+.live-platform-col { position: relative; display: grid; gap: 10px; }
+.live-platform-col .lp-prompt { color: var(--muted-foreground); font-family: var(--font-display); font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.lp-btn .lp-icon { display: inline-flex; margin-right: 4px; }
 .manual-status { position: relative; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--muted-foreground); font-family: var(--font-display); font-size: .61rem; }
 .manual-status span { width: 5px; height: 5px; background: var(--khaki); }
 
@@ -203,8 +214,9 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 640px) {
   .site-container { width: min(1180px, calc(100% - 56px)); }
   .nav-discord { display: inline-flex; margin-left: auto; }
-  .hero-actions { display: flex; }
-  .hero-actions .button { min-width: 220px; }
+  .hero-actions { display: grid; }
+  .hero-actions .button-ghost { justify-self: start; min-width: 220px; }
+  .live-platform-btn { flex: 1 1 130px; min-height: 48px; }
   .channel-grid { grid-template-columns: repeat(2, 1fr); }
   .support-actions { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: row; align-items: center; }
