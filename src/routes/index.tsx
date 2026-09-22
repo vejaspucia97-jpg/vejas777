@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   ChevronDown,
-  ChevronDown,
   CircleDollarSign,
   Menu,
   MessageCircle,
