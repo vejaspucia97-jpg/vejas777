@@ -176,11 +176,19 @@ function VejasPage() {
               <p className="hero-lead">Sveikas atvykęs į mano kampą.</p>
               <p className="hero-subcopy">Transliacijos, video, bendruomenė ir dar daugiau.</p>
               <div className="hero-actions">
-                <ExternalLink href={links.kick} className="button button-live">
+                <div className="live-now-label" aria-live="polite">
                   <span className="status-dot" aria-hidden="true" />
                   ŽIŪRĖTI TIESIOGIAI
-                  <ArrowUpRight size={19} aria-hidden="true" />
-                </ExternalLink>
+                </div>
+                <div className="live-platform-row" role="group" aria-label="Pasirink live platformą">
+                  {livePlatforms.map(({ name, href, icon: Icon, color }) => (
+                    <ExternalLink key={name} href={href} className="live-platform-btn" label={`Žiūrėti ${name} tiesiogiai`}>
+                      <span className="lp-icon" style={{ color }} aria-hidden="true"><Icon size={22} /></span>
+                      <span className="lp-name">{name}</span>
+                      <span className="status-dot status-dot-tiny" aria-hidden="true" />
+                    </ExternalLink>
+                  ))}
+                </div>
                 <a href="#kanalai" className="button button-ghost">
                   MANO KANALAI <ChevronDown size={19} aria-hidden="true" />
                 </a>
