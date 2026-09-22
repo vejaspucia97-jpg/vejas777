@@ -222,10 +222,12 @@ function VejasPage() {
               <p>Pasirink platformą ir prisijunk.</p>
             </div>
             <div className="channel-grid">
-              {channels.map(({ name, description, href, icon: Icon, code }) => (
+              {channels.map(({ name, description, href, icon: Icon, color, code }) => (
                 <ExternalLink key={name} href={href} className="channel-card" label={`Atidaryti ${name}`}>
                   <div className="channel-card-top">
-                    <span className="channel-icon"><Icon size={25} aria-hidden="true" /></span>
+                    <span className="channel-icon" style={{ color }}>
+                      <Icon size={26} />
+                    </span>
                     <span className="channel-code">{code}</span>
                   </div>
                   <div>
